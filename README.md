@@ -33,3 +33,6 @@ This repo is the upstream operator lab.
 - Upstream operator: `BlackRoad-OS/RoadCode`
 - Production operator: `BlackRoad-OS-Inc/RoadCode`
 - Canonical source root: `BlackRoad-OS-Inc/source`
+- Platform stack map: `PLATFORM_STACK.md`
+- Provider and fleet registry: `infra/platform-registry.json`
+- Local health command: `bash scripts/platform-health.sh`

@@ -6,11 +6,12 @@
     <title>BlackRoad-OS RoadCode</title>
     <style>
       :root {
-        --bg: #0f1419;
-        --panel: #141d24;
-        --ink: #f3f7fb;
-        --muted: #8ea4b8;
-        --accent: #5fd1a5;
+        --bg: #0b0e12;
+        --panel: #10161d;
+        --ink: #eef4fa;
+        --muted: #8a9daf;
+        --accent: #ff6b2b;
+        --accent-2: #00d4ff;
         --line: rgba(255,255,255,0.08);
       }
       * { box-sizing: border-box; }
@@ -19,12 +20,13 @@
         min-height: 100vh;
         font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
         background:
-          radial-gradient(circle at top, rgba(95,209,165,0.22), transparent 30%),
-          linear-gradient(180deg, #0b1116 0%, #101921 100%);
+          radial-gradient(circle at top left, rgba(255,107,43,0.22), transparent 30%),
+          radial-gradient(circle at top right, rgba(0,212,255,0.18), transparent 26%),
+          linear-gradient(180deg, #090d12 0%, #111821 100%);
         color: var(--ink);
       }
       main {
-        max-width: 900px;
+        max-width: 1120px;
         margin: 0 auto;
         padding: 72px 24px;
       }
@@ -44,10 +46,16 @@
         line-height: 0.95;
       }
       p {
-        max-width: 640px;
+        max-width: 740px;
         color: var(--muted);
         font-size: 18px;
         line-height: 1.6;
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: start;
       }
       .grid {
         display: grid;
@@ -65,12 +73,37 @@
         margin: 0 0 10px;
         font-size: 18px;
       }
+      .metric {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 8px 0;
+      }
       .card code {
         color: var(--accent);
         font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
       }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+      li + li {
+        margin-top: 8px;
+      }
+      .section-title {
+        margin: 64px 0 14px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent-2);
+      }
       a {
         color: var(--ink);
+      }
+      @media (max-width: 860px) {
+        .split {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -79,26 +112,79 @@
       <span class="eyebrow">BlackRoad-OS</span>
       <h1>RoadCode</h1>
       <p>
-        Operator landing page for BlackRoad-OS. This repo is the shared control surface for automation,
-        deployment, and repo tooling across GitHub, Gitea, Slack, and Cloudflare.
+        Upstream operator war room for BlackRoad. This is where Railway, Vercel, Cloudflare,
+        Tailscale, Ollama, oceans, Pis, IoT devices, and org automation get stitched together
+        before promotion into the canonical operator plane.
       </p>
+      <div class="split">
+        <section class="card">
+          <h2>Operator Stance</h2>
+          <p class="metric">Upstream</p>
+          <p>
+            `BlackRoad-OS/RoadCode` is the messy operator lab. Stable patterns promote into
+            `BlackRoad-OS-Inc/RoadCode`.
+          </p>
+        </section>
+        <section class="card">
+          <h2>Live Surfaces</h2>
+          <ul>
+            <li>GitHub Pages: <a href="https://blackroad-os.github.io/RoadCode/">blackroad-os.github.io/RoadCode</a></li>
+            <li>Cloudflare Pages: <a href="https://blackroad-os-roadcode.pages.dev">blackroad-os-roadcode.pages.dev</a></li>
+            <li>GitHub Repo: <a href="https://github.com/BlackRoad-OS/RoadCode">BlackRoad-OS/RoadCode</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="section-title">Platform Stack</div>
       <div class="grid">
         <section class="card">
-          <h2>GitHub Pages</h2>
-          <p><a href="https://blackroad-os.github.io/RoadCode/">https://blackroad-os.github.io/RoadCode/</a></p>
+          <h2>Providers</h2>
+          <ul>
+            <li>Railway service deployment</li>
+            <li>Vercel app delivery</li>
+            <li>Cloudflare DNS, Workers, Pages</li>
+            <li>DigitalOcean ocean compute</li>
+          </ul>
         </section>
         <section class="card">
-          <h2>Cloudflare Pages</h2>
-          <p>Project: <code>blackroad-os-roadcode</code></p>
-          <p>URL: <a href="https://blackroad-os-roadcode.pages.dev">https://blackroad-os-roadcode.pages.dev</a></p>
+          <h2>Private Mesh</h2>
+          <ul>
+            <li>Tailscale SSH and fleet routing</li>
+            <li>Reachable: alice, aria, lucidia, anastasia, cecilia, octavia, gematria, blackroad</li>
+            <li>Needs mapping: cadence</li>
+          </ul>
         </section>
         <section class="card">
-          <h2>Default Branch</h2>
-          <p><code>main</code></p>
+          <h2>Model Runtime</h2>
+          <ul>
+            <li>Ollama available locally</li>
+            <li>Agent and inference models already present</li>
+            <li>Edge hosts expose `11434` on the LAN</li>
+          </ul>
         </section>
         <section class="card">
-          <h2>GitHub Repo</h2>
-          <p><a href="https://github.com/BlackRoad-OS/RoadCode">https://github.com/BlackRoad-OS/RoadCode</a></p>
+          <h2>Fleet Reality</h2>
+          <ul>
+            <li>LAN compute: 192.168.4.38, .49, .96, .98, .101</li>
+            <li>Pis and IoT are part of the same operator surface</li>
+            <li>Health script writes artifacts locally for live checks</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="section-title">Operator Files</div>
+      <div class="grid">
+        <section class="card">
+          <h2>Stack Contract</h2>
+          <p><a href="../PLATFORM_STACK.md">PLATFORM_STACK.md</a></p>
+        </section>
+        <section class="card">
+          <h2>Registry</h2>
+          <p><a href="../infra/platform-registry.json">infra/platform-registry.json</a></p>
+        </section>
+        <section class="card">
+          <h2>Local Health</h2>
+          <p><code>bash scripts/platform-health.sh</code></p>
         </section>
       </div>
     </main>

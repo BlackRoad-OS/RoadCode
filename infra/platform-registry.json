@@ -1,0 +1,70 @@
+{
+  "repo": "BlackRoad-OS/RoadCode",
+  "mode": "upstream-operator",
+  "updated_at": "2026-03-18",
+  "platforms": [
+    {
+      "name": "GitHub",
+      "purpose": "source of truth for operator code, workflows, and org federation"
+    },
+    {
+      "name": "Gitea",
+      "purpose": "parallel git surface and RoadCode mirror layer"
+    },
+    {
+      "name": "Vercel",
+      "purpose": "web deploy surface for BlackRoad apps and pages"
+    },
+    {
+      "name": "Cloudflare",
+      "purpose": "DNS, Pages, Workers, and edge control plane"
+    },
+    {
+      "name": "Railway",
+      "purpose": "app and service deployment surface"
+    },
+    {
+      "name": "DigitalOcean",
+      "purpose": "ocean compute, droplets, and platform infra"
+    },
+    {
+      "name": "Tailscale",
+      "purpose": "private mesh, SSH, and fleet reachability"
+    },
+    {
+      "name": "Ollama",
+      "purpose": "local and edge model runtime"
+    }
+  ],
+  "fleet": {
+    "reachable_hosts": [
+      "alice",
+      "aria",
+      "lucidia",
+      "anastasia",
+      "cecilia",
+      "octavia",
+      "gematria",
+      "blackroad"
+    ],
+    "unresolved_hosts": [
+      "cadence"
+    ],
+    "tailscale_nodes": [
+      "alice",
+      "aria",
+      "cecilia",
+      "codex-infinity",
+      "lucidia",
+      "octavia",
+      "shellfish"
+    ],
+    "lan_compute_nodes": [
+      "192.168.4.38",
+      "192.168.4.49",
+      "192.168.4.96",
+      "192.168.4.98",
+      "192.168.4.101"
+    ]
+  }
+}
