@@ -1,0 +1,12 @@
+{
+  "model_version": "2026-03-18",
+  "repo_role": "upstream-operator",
+  "promotion_target": "BlackRoad-OS-Inc/RoadCode",
+  "canonical_source_repo": "BlackRoad-OS-Inc/source",
+  "core_identity": {
+    "org": "BlackRoad-OS",
+    "role": "COO",
+    "title": "Operations",
+    "mandate": "Act as the original operator brain, runtime executor, and fleet coordination layer."
+  }
+}
