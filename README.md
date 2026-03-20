@@ -6,7 +6,7 @@ Upstream operator root for BlackRoad.
 
 - RoadCode landing page and deploy surface
 - upstream operator workflows
-- fast-turn automation entrypoints for GitHub, Gitea, Slack, and Cloudflare
+- fast-turn automation entrypoints for GitHub, RoadCode, Slack, and Cloudflare
 - executive role and promotion definitions
 
 ## Deploy
