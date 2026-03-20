@@ -36,3 +36,13 @@ This repo is the upstream operator lab.
 - Platform stack map: `PLATFORM_STACK.md`
 - Provider and fleet registry: `infra/platform-registry.json`
 - Local health command: `bash scripts/platform-health.sh`
+
+---
+
+**Proprietary Software — BlackRoad OS, Inc.**
+
+This software is proprietary to BlackRoad OS, Inc. Source code is publicly visible for transparency and collaboration. Commercial use, forking, and redistribution are prohibited without written authorization.
+
+**BlackRoad OS — Pave Tomorrow.**
+
+*Copyright 2024-2026 BlackRoad OS, Inc. All Rights Reserved.*
