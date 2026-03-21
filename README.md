@@ -1,48 +1,49 @@
-# BlackRoad-OS RoadCode
+# BlackRoad-OS — RoadCode
 
-Upstream operator root for BlackRoad.
+> Core Platform division of [BlackRoad OS, Inc.](https://github.com/BlackRoad-OS-Inc)
 
-## What Lives Here
+The sovereign operating system. 200+ repos. Core platform, agents, infrastructure.
 
-- RoadCode landing page and deploy surface
-- upstream operator workflows
-- fast-turn automation entrypoints for GitHub, RoadCode, Slack, and Cloudflare
-- executive role and promotion definitions
+## Connection to BlackRoad-OS-Inc
 
-## Deploy
+```
+BlackRoad-OS-Inc (Parent — Data Layer)
+  └── BlackRoad-OS (Core Platform)
+      └── RoadCode (this repo — workspace + automation)
+```
 
-This repo ships a static site from site/ to both GitHub Pages and Cloudflare Pages.
+- **Parent Org**: [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
+- **Master RoadCode**: [BlackRoad-OS-Inc/RoadCode](https://github.com/BlackRoad-OS-Inc/RoadCode)
+- **Operator**: [BlackRoad-OS-Inc/blackroad-operator](https://github.com/BlackRoad-OS-Inc/blackroad-operator)
+- **Domain**: [blackroad.io](https://blackroad.io)
+- **Repos in this org**: 200
 
-- GitHub Pages URL: https://blackroad-os.github.io/RoadCode/
-- Cloudflare Pages URL: https://blackroad-os-roadcode.pages.dev
-- Expected Cloudflare project name: blackroad-os-roadcode
+## Role
 
-## Operator Notes
+| Property | Value |
+|----------|-------|
+| **Division** | Core Platform |
+| **Parent** | BlackRoad-OS-Inc |
+| **Governance** | [Cece Protocol](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ORG-MAP.md) |
+| **License** | Proprietary — BlackRoad OS, Inc. |
 
-- Default branch: main
-- GitHub Pages workflow: .github/workflows/github-pages.yml
-- Workflow: .github/workflows/roadcode-pages.yml
-- Site entrypoint: site/index.html
-- Executive charter: EXECUTIVE_MODEL.md
-- Org role registry: org-executives.json
+## RoadCode Standard
 
-## Role In The System
+Every BlackRoad org follows the RoadCode standard:
+- `RoadCode/` repo = workspace + automation hub
+- `.github/` repo = org profile + shared workflows
+- `operator/` repo = CLI tools + bootstrap scripts
+- `source/` repo = canonical source tree
 
-This repo is the upstream operator lab.
+All orgs report to **BlackRoad-OS-Inc** as the central coordination layer.
 
-- Upstream operator: `BlackRoad-OS/RoadCode`
-- Production operator: `BlackRoad-OS-Inc/RoadCode`
-- Canonical source root: `BlackRoad-OS-Inc/source`
-- Platform stack map: `PLATFORM_STACK.md`
-- Provider and fleet registry: `infra/platform-registry.json`
-- Local health command: `bash scripts/platform-health.sh`
+## Quick Links
+
+- [Master ORG-MAP](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ORG-MAP.md)
+- [Master TODO](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/TODO.md)
+- [Master ROADMAP](https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ROADMAP.md)
+- [All Domain Repos](https://github.com/orgs/BlackRoad-OS-Inc/repositories)
 
 ---
 
 **Proprietary Software — BlackRoad OS, Inc.**
-
-This software is proprietary to BlackRoad OS, Inc. Source code is publicly visible for transparency and collaboration. Commercial use, forking, and redistribution are prohibited without written authorization.
-
-**BlackRoad OS — Pave Tomorrow.**
-
-*Copyright 2024-2026 BlackRoad OS, Inc. All Rights Reserved.*
