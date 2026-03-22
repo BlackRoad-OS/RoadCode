@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root {
-  --bg: #090d12;
-  --panel: #10161d;
-  --panel-strong: #141d27;
-  --ink: #eef4fa;
-  --muted: #8a9daf;
+  --bg: #000;
+  --panel: #0a0a0a;
+  --panel-strong: #111;
+  --ink: #f5f5f5;
+  --muted: #737373;
   --accent: #ff6b2b;
   --accent-2: #00d4ff;
-  --line: rgba(255, 255, 255, 0.08);
+  --line: #1a1a1a;
   --ok: #39d98a;
   --warn: #f5a623;
+  --grad: linear-gradient(90deg, #FF6B2B, #FF2255, #CC00AA, #8844FF, #4488FF, #00D4FF);
+  --sg: 'Space Grotesk', sans-serif;
+  --jb: 'JetBrains Mono', monospace;
+  --in: 'Inter', sans-serif;
 }
 
 * {
@@ -18,11 +24,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(255, 107, 43, 0.2), transparent 30%),
-    radial-gradient(circle at top right, rgba(0, 212, 255, 0.16), transparent 24%),
-    linear-gradient(180deg, #090d12 0%, #111821 100%);
+  font-family: var(--sg);
+  background: var(--bg);
   color: var(--ink);
 }
 
@@ -50,7 +53,7 @@ a {
 }
 
 .eyebrow {
-  color: var(--accent);
+  color: var(--ink);
   padding: 6px 12px;
 }
 
@@ -79,14 +82,14 @@ a {
 .panel {
   border: 1px solid var(--line);
   border-radius: 22px;
-  background: rgba(16, 22, 29, 0.82);
+  background: var(--panel);
   padding: 22px;
 }
 
 .hero-panel {
-  background:
-    linear-gradient(180deg, rgba(255, 107, 43, 0.08), transparent 30%),
-    rgba(16, 22, 29, 0.88);
+  background: var(--panel);
+  border-top: 2px solid;
+  border-image: var(--grad) 1;
 }
 
 .metric {
@@ -101,7 +104,9 @@ a {
 
 .section-title {
   margin: 60px 0 16px;
-  color: var(--accent-2);
+  color: var(--ink);
+  opacity: 0.5;
+  font-family: var(--jb);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -140,8 +145,13 @@ a {
 .card {
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: rgba(16, 22, 29, 0.78);
+  background: var(--panel);
   padding: 20px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #333;
 }
 
 .stack-item {
